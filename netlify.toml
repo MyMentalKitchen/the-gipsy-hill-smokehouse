@@ -1,0 +1,19 @@
+# Netlify configuration for The Gipsy Hill Smokehouse
+# Static HTML site — no build step. Netlify serves the repo root as-is.
+
+[build]
+  publish = "."
+  command = ""
+
+# Send a common /home request to the real home page.
+[[redirects]]
+  from = "/home"
+  to = "/index.html"
+  status = 301
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
