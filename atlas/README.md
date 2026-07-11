@@ -1,0 +1,3 @@
+# Atlas
+
+Working folder.
