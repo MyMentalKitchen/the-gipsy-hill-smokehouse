@@ -1,5 +1,10 @@
 /* The Gipsy Hill Smokehouse - shared styles */
 
+/* Contact form status message */
+.form-status { margin-top: 14px; font-weight: 600; min-height: 1.2em; }
+.form-status.ok { color: #2f7d32; }
+.form-status.error { color: #b3261e; }
+
 :root {
   --primary: #C2C2B0;
   --secondary: #F3F2DC;

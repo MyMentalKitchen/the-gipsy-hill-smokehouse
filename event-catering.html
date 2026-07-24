@@ -107,25 +107,27 @@
   <div class="container">
     <h2 class="section-title">Your Wedding or Party Quote</h2>
     <p class="section-intro">Tell us a little about your event. We'll come back to you within 24 hours.</p>
-    <form class="form-card" onsubmit="event.preventDefault(); alert('Thanks — we will be in touch shortly.');">
-      <div class="form-row"><label>Name</label><input type="text" required></div>
-      <div class="form-row"><label>Email</label><input type="email" required></div>
-      <div class="form-row"><label>Phone</label><input type="tel"></div>
+    <form class="form-card" action="https://formspree.io/f/mqeryylv" method="POST">
+      <div class="form-row"><label>Name</label><input type="text" name="name" required></div>
+      <div class="form-row"><label>Email</label><input type="email" name="email" required></div>
+      <div class="form-row"><label>Phone</label><input type="tel" name="phone"></div>
       <div class="form-row">
         <label>Which package?</label>
-        <select>
+        <select name="package">
           <option>Hog Roast 100</option>
           <option>Hog Roast 150</option>
           <option>Barbeque</option>
           <option>From The Sea</option>
         </select>
       </div>
-      <div class="form-row"><label>Date of event</label><input type="date"></div>
-      <div class="form-row"><label>Service start time</label><input type="time"></div>
-      <div class="form-row"><label>Type of event</label><input type="text" placeholder="Party, wedding, corporate event…"></div>
-      <div class="form-row"><label>Venue address</label><input type="text"></div>
-      <div class="form-row"><label>Notes (dietary requirements, extras…)</label><textarea></textarea></div>
+      <div class="form-row"><label>Date of event</label><input type="date" name="event_date"></div>
+      <div class="form-row"><label>Service start time</label><input type="time" name="start_time"></div>
+      <div class="form-row"><label>Type of event</label><input type="text" name="event_type" placeholder="Party, wedding, corporate event…"></div>
+      <div class="form-row"><label>Venue address</label><input type="text" name="venue"></div>
+      <div class="form-row"><label>Notes (dietary requirements, extras…)</label><textarea name="message"></textarea></div>
+      <input type="hidden" name="_subject" value="New event-catering enquiry from thegipsyhillsmokehouse.co.uk">
       <div class="form-actions"><button type="submit" class="btn btn-primary">Submit Enquiry</button></div>
+      <p class="form-status" role="status" aria-live="polite"></p>
     </form>
   </div>
 </section>

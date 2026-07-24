@@ -67,15 +67,17 @@
   <div class="container">
     <h2 class="section-title">Send us a message</h2>
     <p class="section-intro">A quick note about your day — date, guest count, location, and what you're imagining.</p>
-    <form class="form-card" onsubmit="event.preventDefault(); alert('Success! Message received.');">
-      <div class="form-row"><label>Name</label><input type="text" required></div>
-      <div class="form-row"><label>Email</label><input type="email" required></div>
-      <div class="form-row"><label>Phone</label><input type="tel"></div>
-      <div class="form-row"><label>Date of event</label><input type="date"></div>
-      <div class="form-row"><label>Number of guests</label><input type="number" min="1"></div>
-      <div class="form-row"><label>Type of event</label><input type="text" placeholder="Wedding, party, corporate…"></div>
-      <div class="form-row"><label>Tell us more</label><textarea placeholder="Venue, dietary requirements, any extras you'd like…"></textarea></div>
+    <form class="form-card" id="enquiry-form" action="https://formspree.io/f/mqeryylv" method="POST">
+      <div class="form-row"><label>Name</label><input type="text" name="name" required></div>
+      <div class="form-row"><label>Email</label><input type="email" name="email" required></div>
+      <div class="form-row"><label>Phone</label><input type="tel" name="phone"></div>
+      <div class="form-row"><label>Date of event</label><input type="date" name="event_date"></div>
+      <div class="form-row"><label>Number of guests</label><input type="number" name="guests" min="1"></div>
+      <div class="form-row"><label>Type of event</label><input type="text" name="event_type" placeholder="Wedding, party, corporate…"></div>
+      <div class="form-row"><label>Tell us more</label><textarea name="message" placeholder="Venue, dietary requirements, any extras you'd like…"></textarea></div>
+      <input type="hidden" name="_subject" value="New enquiry from thegipsyhillsmokehouse.co.uk">
       <div class="form-actions"><button type="submit" class="btn btn-primary">Send</button></div>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
     </form>
   </div>
 </section>
