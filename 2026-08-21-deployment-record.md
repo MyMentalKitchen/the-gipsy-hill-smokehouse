@@ -1,7 +1,6 @@
 # GHS website deployment — record of the 21 Aug 2026 run
 
-**Outcome: the SERP 404 problem is fixed.** Stages 1–6 and 8 of `DEPLOYMENT-CHECKLIST.md` are complete
-and independently verified. Stage 9 (loose ends) outstanding.
+**Outcome: the SERP 404 problem is fixed.** Stages 1–6, 8 and most of 9 are complete and independently verified.
 
 ## What changed
 
@@ -66,19 +65,38 @@ from the report at any time (removing a sitemap does not deindex anything).
 **Expect:** one to three weeks for the SERP to re-crawl and tidy up. The difference from today is that
 those links *work* rather than dead-ending.
 
-### Stage 9 — loose ends
-- **Custom 404 does not serve** — GoDaddy ignores `ErrorDocument` from `.htaccess` (proved with a
-  literal test string). Try cPanel → Advanced → Error Pages, or GoDaddy support. See Stage 9.6.
-- **Delete `backup-before-404-fix-2026-08-20.zip` from the server** — currently publicly downloadable
-  at `thegipsyhillsmokehouse.co.uk/backup-before-404-fix-2026-08-20.zip`. Tim has a copy on his Desktop.
-- **No privacy policy** — the forms collect names, emails and phone numbers. UK GDPR. `/privacy-policy`
-  and `/terms-conditions` are the only old URLs still 404ing.
-- **The two lost blog posts** — the apple-in-the-mouth post carried ~64% of all organic traffic; the
-  pork-crackling post ranked for 131 keywords. Redirects preserve some equity; the content is gone.
-  Highest-value rebuild available.
-- **All 75 images still load from `static.wixstatic.com`** — if that account lapses every photo vanishes.
-- **Gmail filter gap** — the "all enquiries" aggregate filter covers Feast It, Add to Event, Togather
-  and 123FormBuilder but not Formspree, now the main web form.
-- **Confirm a real Formspree submission lands** — the forms have never been tested end-to-end since
-  going live.
-- **GoDaddy injects `tccl.min.js`** into every page. Opt-out via their support if wanted.
+### Stage 9 — mostly COMPLETE (21 Aug 2026)
+
+**Done:**
+- ✅ **Wix CDN dependency removed.** All 69 images rehosted to `/images/` on our own
+  server. Transferred browser-side (fetch from Wix → cPanel API) because GoDaddy
+  disables shell access and the upload page 404s. All 69 verified byte-identical
+  between repo and server; 0 wixstatic references remain sitewide.
+- ✅ **Both enquiry forms tested end-to-end.** Contact and event-catering forms each
+  submitted and confirmed arriving in the GHS inbox with all 7 fields, 10:11 and
+  10:12. Distinct subject lines per page. First proof since the July Formspree rewiring.
+- ✅ **Backup rescued.** The Desktop copy had never completed — the only copy was the
+  publicly downloadable one on the server. Downloaded, zip integrity verified (13
+  files), saved to Desktop, then the server copy and `_rehost.py` were trashed.
+- ✅ **Three new pages live**: `/our-story`, `/privacy-policy`, `/terms-conditions`.
+  Closes both remaining legacy 404s. Our Story names the Fat Duck per Tim's explicit
+  decision (21 Aug), overriding the pending-consent default.
+- ✅ Our Story added to its nav submenu (previously had no story page), Privacy and
+  Terms in the footer sitewide, copyright 2024 → 2026, sitemap now 13 URLs and
+  resubmitted — Search Console reports **Success, 13 discovered pages**.
+
+**Still open:**
+- ⛔ **Custom 404 page.** `ErrorDocument` is ignored by GoDaddy's edge layer — proved
+  with a literal-string probe, which never appeared. The 13-byte response is not
+  Apache's own default either. Needs GoDaddy support, not a config change. NB an
+  earlier hypothesis that our own `.html`→extensionless redirect was the cause was
+  tested and disproved; `.htaccess` now points at `/404` regardless, which is correct
+  if the block is ever lifted.
+- ⛔ **The two lost blog posts.** The apple-in-the-mouth piece was ~64% of all organic
+  traffic; the pork-crackling piece ranked for 131 keywords. The Dropbox file
+  `SEO/What To Serve At A Pig Roast.docx` turns out to be keyword research, not a
+  draft — these need writing properly, in voice.
+- ◻️ Six stale Wix-era sitemaps still listed in Search Console and permanently failing.
+  Harmless; removable any time.
+- ◻️ Two test enquiries sitting in the GHS inbox to delete.
+- ◻️ Repo committed locally but not pushed to GitHub.
