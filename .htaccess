@@ -68,8 +68,14 @@ RewriteRule ^copy-of-tab-menu/?$                            /our-food [R=301,L]
 # --- Media
 RewriteRule ^videos-hog-roast-gipsy-hill-smokehouse/?$      /gallery [R=301,L]
 
+# --- Restored posts: if a real page exists for this path, serve it and stop.
+#     Must sit ABOVE the legacy redirects, or the /post catch-all below swallows it.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+?)/?$ /$1.html [END]
+
 # --- Blog posts (blog retired — sent to the closest service page)
-RewriteRule ^post/why-is-an-apple-placed-in-the-mouth-of-a-hog-roast/?$              /spit-roasts-hog-roasts [R=301,L]
 RewriteRule ^post/ultimate-guide-to-achieving-the-perfect-pork-crackling/?$          /spit-roasts-hog-roasts [R=301,L]
 RewriteRule ^post/what-is-a-hog-roast/?$                                             /spit-roasts-hog-roasts [R=301,L]
 RewriteRule ^post/hog-roast/?$                                                       /spit-roasts-hog-roasts [R=301,L]
@@ -85,7 +91,9 @@ RewriteRule ^post/what-are-the-best-options-for-catering-at-a-wedding/?$        
 RewriteRule ^post/why-a-hog-roast-is-the-perfect-solution-for-wedding-catering/?$    /wedding-catering [R=301,L]
 
 # Any other blog URL falls back to the hog roast page
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^post(/.*)?$                                    /spit-roasts-hog-roasts? [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^blog(/.*)?$                                    /spit-roasts-hog-roasts? [R=301,L]
 
 # --- Retired one-off / private event pages, Wix system pages

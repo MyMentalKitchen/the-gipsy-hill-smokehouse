@@ -82,6 +82,12 @@
       title: 'Terms & Conditions',
       description: 'Booking terms and conditions for hog roast, spit roast and barbecue catering with The Gipsy Hill Smokehouse Ltd.',
       keywords: 'terms conditions booking deposit cancellation final numbers prices payment liability conduct t&cs'
+    },
+    {
+      url: '/post/why-is-an-apple-placed-in-the-mouth-of-a-hog-roast',
+      title: 'Why Is An Apple Placed In The Mouth Of A Hog Roast?',
+      description: 'The traditions, the myth about flavour, and the honest answer to why an apple goes in the mouth of a hog roast.',
+      keywords: 'apple in the mouth hog roast pig why tradition harvest applewood spit roast theatre carving whole pig folklore'
     }
   ];
 

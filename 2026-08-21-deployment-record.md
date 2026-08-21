@@ -131,13 +131,23 @@ keywords for Our Story / Privacy / Terms, and 105 lines of search CSS appended.
 Verified on the live site: button mounts on all 13 pages; `fat duck` → `/our-story`,
 `gdpr` → `/privacy-policy`, `cancellation deposit` → `/terms-conditions`.
 
-## ⛔ Outstanding — needs Tim, 20 seconds
+## ✅ Default branch switched (21 Aug 2026)
 
-**Set `cpanel-live-site` as the repo's default branch.** GitHub was not logged in on the
-Chrome profile available, and credentials are never entered on Tim's behalf.
+`cpanel-live-site` is now the repo's default branch — GitHub confirmed *"Default branch
+changed to cpanel-live-site"*. Opening the repo now shows the real site: `images/`, the
+three new pages, `search.js`, and no `netlify.toml`. `main` is retained as history.
 
-> github.com/MyMentalKitchen/the-gipsy-hill-smokehouse → **Settings** → **General** →
-> *Default branch* → switch icon → choose `cpanel-live-site` → **Update**
+## Later that day — barbecue image, search, and a caching trap
 
-Until that is done, anyone opening the repo sees the stale Netlify version and may
-reasonably assume it is the live site. It is not.
+- **Barbecue card was showing a hog roast.** `hog-roast.jpg` (a whole hog on a spit) sat
+  under copy reading "chicken piri piri… fired up over wood". Swapped to `bbq-chicken.jpg`.
+  Found by opening the images, not reading filenames. `privateparty.jpg`'s alt was also
+  wrong ("Hog Roast Private Parties" on a barbecue spread) — corrected. **A wider alt-text
+  pass is still owed**; Dropbox has a 2024 note "Add missing ALT text to 29 site images".
+- **Search appeared broken** — clicking the icon scrolled to the bottom of the page. Root
+  cause was NOT the markup: `.htaccess` sets a 30-day cache on CSS, so the browser held a
+  pre-search stylesheet and the overlay rendered as a static block at the end of the
+  document. **Fixed by versioning asset URLs (`?v=20260821b`) — bump on every CSS/JS change
+  from now on, or returning visitors won't see it for a month.**
+- **Search icon was the `⌕` glyph** — renders poorly, read as decoration. Replaced with an
+  inline SVG magnifier plus a visible "Search" label (icon-only under 700px).
