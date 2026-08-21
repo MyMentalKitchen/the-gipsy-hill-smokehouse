@@ -1,0 +1,140 @@
+# The Gipsy Hill Smokehouse — Apache config
+# Handles: canonical host, legacy Wix URL redirects, extensionless URLs, 404 page.
+# Deploy: upload to public_html/ alongside the .html files.
+
+Options -Indexes +FollowSymLinks
+DirectoryIndex index.html
+ErrorDocument 404 /404
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# ---------------------------------------------------------------
+# 1. CANONICAL HOST — everything lands on
+#    https://www.thegipsyhillsmokehouse.com
+#
+#    www.thegipsyhillsmokehouse.com is the address Google has indexed and
+#    the one existing backlinks point at, so it is the canonical home.
+#    This one rule covers: http -> https, non-www -> www, and the whole
+#    .co.uk domain -> .com. Path is always preserved.
+# ---------------------------------------------------------------
+# (the X-Forwarded-Proto check prevents a redirect loop if SSL is ever
+#  terminated at a proxy rather than at Apache itself)
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+RewriteRule ^ https://www.thegipsyhillsmokehouse.com%{REQUEST_URI} [R=301,L]
+
+RewriteCond %{HTTP_HOST} !^www\.thegipsyhillsmokehouse\.com$ [NC]
+RewriteRule ^ https://www.thegipsyhillsmokehouse.com%{REQUEST_URI} [R=301,L]
+
+# ---------------------------------------------------------------
+# 2. LEGACY WIX URLS — 301 to the closest live page
+#    (old site ran on thegipsyhillsmokehouse.com, extensionless URLs)
+# ---------------------------------------------------------------
+
+# --- Contact / about
+RewriteRule ^contact-us/?$                                  /contact [R=301,L]
+RewriteRule ^about-us-wedding-catering-services/?$          /wedding-catering [R=301,L]
+
+# --- Weddings
+RewriteRule ^hog-roast-wedding-caterer-london/?$            /wedding-catering [R=301,L]
+RewriteRule ^hog-roast-wedding-catering/?$                  /wedding-catering [R=301,L]
+RewriteRule ^menus/wedding-menus/?$                         /wedding-menus [R=301,L]
+
+# --- Hog roast / spit roast service pages
+RewriteRule ^hogroasts/?$                                   /spit-roasts-hog-roasts [R=301,L]
+RewriteRule ^ultimate-guide-to-hog-roasts/?$                /spit-roasts-hog-roasts [R=301,L]
+RewriteRule ^hog-roast-catering-beckenham/?$                /spit-roasts-hog-roasts [R=301,L]
+RewriteRule ^trailer/?$                                     /spit-roasts-hog-roasts [R=301,L]
+
+# --- Parties / events
+RewriteRule ^hog-roast-party/?$                             /private-parties [R=301,L]
+RewriteRule ^venues/?$                                      /event-catering [R=301,L]
+
+# --- Menus and food (all collapsed into Our Food)
+RewriteRule ^menus?/?$                                      /our-food [R=301,L]
+RewriteRule ^gipsy-hill-smokehouse-menu(/.*)?$              /our-food? [R=301,L]
+RewriteRule ^antipasti/?$                                   /our-food [R=301,L]
+RewriteRule ^canapes/?$                                     /our-food [R=301,L]
+RewriteRule ^desserts/?$                                    /our-food [R=301,L]
+RewriteRule ^drinks/?$                                      /our-food [R=301,L]
+RewriteRule ^pies/?$                                        /our-food [R=301,L]
+RewriteRule ^salads-sides/?$                                /our-food [R=301,L]
+RewriteRule ^brochures/?$                                   /our-food [R=301,L]
+RewriteRule ^copy-of-set-menus/?$                           /our-food [R=301,L]
+RewriteRule ^copy-of-tab-menu/?$                            /our-food [R=301,L]
+
+# --- Media
+RewriteRule ^videos-hog-roast-gipsy-hill-smokehouse/?$      /gallery [R=301,L]
+
+# --- Blog posts (blog retired — sent to the closest service page)
+RewriteRule ^post/why-is-an-apple-placed-in-the-mouth-of-a-hog-roast/?$              /spit-roasts-hog-roasts [R=301,L]
+RewriteRule ^post/ultimate-guide-to-achieving-the-perfect-pork-crackling/?$          /spit-roasts-hog-roasts [R=301,L]
+RewriteRule ^post/what-is-a-hog-roast/?$                                             /spit-roasts-hog-roasts [R=301,L]
+RewriteRule ^post/hog-roast/?$                                                       /spit-roasts-hog-roasts [R=301,L]
+RewriteRule ^post/history-of-the-hog-roast/?$                                        /spit-roasts-hog-roasts [R=301,L]
+RewriteRule ^post/how-the-saxons-gave-us-the-hog-roast/?$                            /spit-roasts-hog-roasts [R=301,L]
+RewriteRule ^post/what-are-the-best-sides-to-pair-with-a-hog-roast/?$                /our-food [R=301,L]
+RewriteRule ^post/bottoms-up-what-drinks-to-pair-with-your-delicious-hog-roast/?$    /our-food [R=301,L]
+RewriteRule ^post/3-top-tips-for-devising-the-perfect-wedding-breakfast/?$           /wedding-menus [R=301,L]
+RewriteRule ^post/3-top-tips-for-devising-the-perfect-wedding-hog-roast-breakfast/?$ /wedding-menus [R=301,L]
+RewriteRule ^post/what-makes-the-perfect-wedding-menu-expert-insights-from-london-s-catering-scene/?$ /wedding-menus [R=301,L]
+RewriteRule ^post/what-makes-a-great-cheese-wheel-wedding-cake/?$                    /wedding-menus [R=301,L]
+RewriteRule ^post/what-are-the-best-options-for-catering-at-a-wedding/?$             /wedding-catering [R=301,L]
+RewriteRule ^post/why-a-hog-roast-is-the-perfect-solution-for-wedding-catering/?$    /wedding-catering [R=301,L]
+
+# Any other blog URL falls back to the hog roast page
+RewriteRule ^post(/.*)?$                                    /spit-roasts-hog-roasts? [R=301,L]
+RewriteRule ^blog(/.*)?$                                    /spit-roasts-hog-roasts? [R=301,L]
+
+# --- Retired one-off / private event pages, Wix system pages
+RewriteRule ^silver-sky-mkp-saturday-feast(-new)?/?$        /? [R=301,L]
+RewriteRule ^mkp-feast/?$                                   /? [R=301,L]
+RewriteRule ^booking-calendar(/.*)?$                        /? [R=301,L]
+RewriteRule ^service-page(/.*)?$                            /? [R=301,L]
+RewriteRule ^cart-page/?$                                   /? [R=301,L]
+RewriteRule ^borough-market/?$                              /? [R=301,L]
+RewriteRule ^sitemap/?$                                     /sitemap.xml [R=301,L]
+
+# ---------------------------------------------------------------
+# 3. EXTENSIONLESS URLS
+#    /event-catering  is canonical;  /event-catering.html  301s to it
+# ---------------------------------------------------------------
+
+# /index.html -> /
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+RewriteRule ^ / [R=301,L]
+
+# /anything.html -> /anything
+RewriteCond %{THE_REQUEST} \s/+([^?\s]*?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# /anything/ -> /anything  (drop trailing slash so relative paths stay sane)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# Serve /anything from anything.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+)$ $1.html [L]
+</IfModule>
+
+# ---------------------------------------------------------------
+# 4. Compression + caching (static site, safe defaults)
+# ---------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css                "access plus 1 month"
+  ExpiresByType application/javascript  "access plus 1 month"
+  ExpiresByType image/jpeg              "access plus 1 year"
+  ExpiresByType image/png               "access plus 1 year"
+  ExpiresByType image/webp              "access plus 1 year"
+  ExpiresByType image/svg+xml           "access plus 1 year"
+  ExpiresByType text/html               "access plus 1 hour"
+</IfModule>
