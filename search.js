@@ -127,7 +127,9 @@
     btn.type = 'button';
     btn.setAttribute('aria-label', 'Search the site');
     btn.setAttribute('aria-haspopup', 'dialog');
-    btn.innerHTML = '<span aria-hidden="true">⌕</span>';
+    btn.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">'
+      + '<circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>'
+      + '<span class="search-toggle-label">Search</span>';
 
     const navToggle = header.querySelector('.nav-toggle');
     if (navToggle) header.insertBefore(btn, navToggle);

@@ -100,3 +100,44 @@ those links *work* rather than dead-ending.
   Harmless; removable any time.
 - ◻️ Two test enquiries sitting in the GHS inbox to delete.
 - ◻️ Repo committed locally but not pushed to GitHub.
+
+---
+
+# GitHub — the repo has TWO unrelated histories (found 21 Aug 2026)
+
+Pushing to `main` was **rejected**: the local repo and the GitHub repo share **no
+common ancestor**. They are two separate lines of work on the same site.
+
+**`main`** (last commit 6 Jul 2026) — a Netlify line that never went live:
+`99b417f` Add files via upload · `a1892b6` Add client-side site search (#1) ·
+`a94f798` Set up Netlify hosting and make the quote form work (#2).
+16 files: the 10 core pages plus `netlify.toml`, `search.js`, `thank-you.html`.
+No images, no `.htaccess`, no sitemap, no robots.txt. Netlify Forms, not Formspree.
+No live deploy found at the obvious `*.netlify.app` addresses.
+
+**`cpanel-live-site`** (pushed 21 Aug 2026) — what is actually live on GoDaddy cPanel.
+94 files including all 69 rehosted images, `.htaccess`, sitemap, robots, and the three
+new pages.
+
+`main` was **not** force-overwritten — that would have destroyed three commits of real
+work on Tim's say-so about a different matter.
+
+## Site search — salvaged from `main`
+
+The one genuinely valuable thing on the Netlify branch. Cherry-picked and adapted:
+index URLs `*.html` → extensionless (they would otherwise each take a 301 under our
+canonicalisation), script include made root-absolute, index extended 10 → 13 pages with
+keywords for Our Story / Privacy / Terms, and 105 lines of search CSS appended.
+Verified on the live site: button mounts on all 13 pages; `fat duck` → `/our-story`,
+`gdpr` → `/privacy-policy`, `cancellation deposit` → `/terms-conditions`.
+
+## ⛔ Outstanding — needs Tim, 20 seconds
+
+**Set `cpanel-live-site` as the repo's default branch.** GitHub was not logged in on the
+Chrome profile available, and credentials are never entered on Tim's behalf.
+
+> github.com/MyMentalKitchen/the-gipsy-hill-smokehouse → **Settings** → **General** →
+> *Default branch* → switch icon → choose `cpanel-live-site` → **Update**
+
+Until that is done, anyone opening the repo sees the stale Netlify version and may
+reasonably assume it is the live site. It is not.

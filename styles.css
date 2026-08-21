@@ -602,3 +602,23 @@ body.search-open { overflow: hidden; }
   font-size: 14px;
 }
 
+
+/* Search toggle — clearer affordance (21 Aug 2026) */
+.search-toggle {
+  width: auto;
+  border-radius: 999px;
+  padding: 0 14px;
+  gap: 7px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--dark);
+  cursor: pointer;
+}
+.search-toggle-label { letter-spacing: 0.02em; }
+@media (max-width: 700px) {
+  .search-toggle { padding: 0; width: 40px; }
+  .search-toggle-label { display: none; }
+}
