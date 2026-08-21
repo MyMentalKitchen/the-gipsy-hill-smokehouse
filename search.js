@@ -88,6 +88,12 @@
       title: 'Why Is An Apple Placed In The Mouth Of A Hog Roast?',
       description: 'The traditions, the myth about flavour, and the honest answer to why an apple goes in the mouth of a hog roast.',
       keywords: 'apple in the mouth hog roast pig why tradition harvest applewood spit roast theatre carving whole pig folklore'
+    },
+    {
+      url: '/blog',
+      title: 'The Fire & Smoke Journal',
+      description: 'Notes on hog roasts, fire, crackling and feeding people outdoors.',
+      keywords: 'blog journal articles notes hog roast crackling fire advice guides posts'
     }
   ];
 
