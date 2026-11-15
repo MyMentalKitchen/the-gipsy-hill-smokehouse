@@ -16,10 +16,7 @@ https://www.thegipsyhillsmokehouse.com/ actually serves.
 
 ## Not synced
 
-- **`.htaccess`.** The server refuses to serve it (403), so the copy here is still the 21 Aug one and
-  is **out of date**: for example it still redirects `/gipsy-hill-smokehouse-menu`, which is now a live
-  page. Never upload this copy. To bring it up to date, download it from cPanel File Manager and
-  commit it here.
+- **`.htaccess`** was downloaded by Tim from cPanel on 15 Nov 2026 and committed as is.
 - The Markdown records (`README.md`, the deployment record and checklist, the build brief) are left as
   they were. Some of their statements are out of date (the README says the rebuild is on `.co.uk`;
   `.com` is the main address).
