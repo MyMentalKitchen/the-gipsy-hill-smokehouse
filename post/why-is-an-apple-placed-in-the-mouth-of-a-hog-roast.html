@@ -2,14 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- Google tag + Consent Mode v2 (GHS) - must be the FIRST script in <head> -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    // Analytics and ad cookies are OFF until the visitor accepts (UK PECR / Google Consent Mode v2)
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+    gtag('set', 'ads_data_redaction', true);
+
+    // Returning visitor: switch on whatever they accepted last time
+    // ghs_cc_v2 = granted (both) | analytics | ads | denied
+    try {
+      (function () {
+        var c = localStorage.getItem('ghs_cc_v2');
+        var an = c === 'granted' || c === 'analytics';
+        var ad = c === 'granted' || c === 'ads';
+        if (an || ad) {
+          gtag('consent', 'update', {
+            ad_storage: ad ? 'granted' : 'denied',
+            ad_user_data: ad ? 'granted' : 'denied',
+            ad_personalization: ad ? 'granted' : 'denied',
+            analytics_storage: an ? 'granted' : 'denied'
+          });
+        }
+      })();
+    } catch (e) {}
+
+    gtag('js', new Date());
+    gtag('config', 'AW-355858447');
+    gtag('config', 'G-QC3BZG396T');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-355858447"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Why Is An Apple Placed In The Mouth Of A Hog Roast? | The Gipsy Hill Smokehouse</title>
-  <meta name="description" content="The real reason an apple goes in the mouth of a hog roast — the traditions, the myth about flavour, and what actually happens when you carry a whole hog out in front of a room.">
+  <title>Why is an apple placed in the mouth of a hog roast? | The Gipsy Hill Smokehouse</title>
+  <meta name="description" content="Why there is an apple in the mouth of a hog roast: the harvest traditions, the myth that it flavours the meat, and what really happens to an apple over seven hours of fire.">
   <link rel="canonical" href="https://www.thegipsyhillsmokehouse.com/post/why-is-an-apple-placed-in-the-mouth-of-a-hog-roast">
+  <meta property="og:title" content="Why is an apple placed in the mouth of a hog roast?">
+  <meta property="og:image" content="https://www.thegipsyhillsmokehouse.com/images/apple-in-mouth-hog-roast-gipsy-hill-smokehouse.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=20260821b">
+  <link rel="stylesheet" href="/styles.css?v=20261106">
+  <style>
+    .post-body { line-height: 1.75; }
+    .post-body p { margin-bottom: 1.4em; }
+    .post-body h2 { margin-top: 2em; margin-bottom: 0.6em; }
+  </style>
 </head>
 <body>
 
@@ -33,8 +78,9 @@
         <li class="has-sub"><a href="#">What's Your Event?</a><ul class="submenu"><li><a href="/wedding-catering">Getting Married</a></li><li><a href="/private-parties">Celebrating</a></li><li><a href="/event-catering">Staff Party</a></li></ul></li>
         <li><a href="/our-food">Our Food</a></li>
         <li class="has-sub"><a href="#">Our Story</a><ul class="submenu"><li><a href="/our-story">Our Story</a></li>
+            <li><a href="/blog">Journal</a></li>
             <li><a href="/testimonials">Testimonials</a></li><li><a href="/gallery">Photos</a></li></ul></li>
-        <li class="has-sub"><a href="#">Menus</a><ul class="submenu"><li><a href="/wedding-menus">Wedding Menus</a></li><li><a href="/spit-roasts-hog-roasts">Hog Roasts</a></li></ul></li>
+        <li class="has-sub"><a href="#">Menus</a><ul class="submenu"><li><a href="/wedding-menus">Wedding Menus</a></li><li><a href="/gipsy-hill-smokehouse-menu">Catering Menu</a></li><li><a href="/spit-roasts-hog-roasts">Hog Roasts</a></li></ul></li>
         <li><a href="/contact">Contact</a></li>
       </ul>
     </nav>
@@ -42,45 +88,37 @@
 </header>
 
 <section class="page-hero">
-  <h1>Why Is An Apple Placed In The Mouth Of A Hog Roast?</h1>
-  <p>The traditions, the myth about flavour, and the honest answer.</p>
+  <h1>Why is an apple placed in the mouth of a hog roast?</h1>
+  <p>The traditions, the flavour myth, and what actually happens to an apple over seven hours of fire.</p>
 </section>
 
 <section>
-  <div class="container narrow">
+  <div class="container narrow post-body">
     <p>Because it works.</p>
-
-    <p>We have carried a lot of hogs out in front of a lot of people &mdash; wedding marquees, back gardens, Borough Market on a Saturday. The thing that gets the noise isn't the crackling, and the crackling is the best bit. It's the apple.</p>
-
-    <p>Take the apple out and it's a cooked pig. Put the apple in and it's an occasion.</p>
-
-    <p>That's the honest answer. Most of the rest is tradition that has been given a reason afterwards.</p>
-
-    <h2>The traditions are real enough</h2>
-
-    <p>Apples and pork have been eaten together for as long as anyone has been writing food down. Apple sauce with roast pork. Applewood for smoking, because of what that particular smoke does to the fat.</p>
-
-    <p>Roast pork was harvest food, and at harvest there were apples everywhere &mdash; including in the pigs, on the belief that it sweetened the meat. Some say the apple in the mouth marks that: the thing the animal ate in life, handed back at the table. Take that as poetry rather than history, but it is a good bit of poetry.</p>
-
-    <h2>The one you can ignore</h2>
-
-    <p>You will read that the apple flavours the meat. That the juice runs down into the cheeks while it cooks.</p>
-
-    <p>It doesn't. An apple in a pig's mouth over seven hours of fire does not survive as an apple. Anything that goes in at the start comes out as sugar and ash.</p>
-
-    <p>The apple you see when the hog is carried out went in about ninety seconds earlier, round the back, while everyone was still drinking.</p>
-
+    <p>We have carried a lot of hogs out in front of a lot of people. Wedding marquees, back gardens, the yard behind a taproom. The thing that gets the noise is never the crackling, and the crackling is the best bit. It is the apple.</p>
+    <p>Take the apple out and you have a cooked pig. Put the apple in and you have an occasion. That is the honest answer to why there is an apple in the mouth of a hog roast. Most of the rest is tradition that was handed a reason afterwards.</p>
+    <p><img src="/images/apple-in-mouth-hog-roast-gipsy-hill-smokehouse.jpg" alt="Whole hog on the spit over coals, head towards the camera, at a Gipsy Hill Smokehouse hog roast" width="900" height="600" style="border-radius:var(--radius);width:100%;height:auto;"></p>
+    <h2>The traditions behind the apple in the mouth</h2>
+    <p>Apples and pork have gone together for as long as anyone has written food down. Apple sauce with roast pork. Applewood for smoking, because of what that particular smoke does to pork fat.</p>
+    <p>Roast pork was harvest food, and at harvest there were apples everywhere, including inside the pigs. Pigs were turned out into orchards and woodland in autumn to eat windfalls and acorns, on the belief that it sweetened the meat. Some people read the apple in the mouth as a nod to that: the thing the animal ate in life, handed back at the table. There is a darker version of the same idea, the apple as a symbol of the cycle of life and death. Take both as poetry rather than history, but it is decent poetry.</p>
+    <p>The medieval version is the boar’s head, carried into the hall at Christmas with fruit in its mouth and everybody singing. The whole pig at a wedding is the same instinct, five hundred years on, with a better sound system.</p>
+    <h2>Does the apple flavour the meat?</h2>
+    <p>You will read that the apple flavours the meat. That its juice runs down into the cheeks while the pig cooks, and that back when the head was the prized part of the animal, this mattered.</p>
+    <p>It does not, and here is the part you only know if you have stood next to one. An apple in a pig’s mouth over seven hours of fire does not survive as an apple. Anything that goes in at the start comes out as sugar and ash. It would need to be replaced two or three times through the cook to be there at the end, and none of that would put a trace of apple into the meat. Pork cheek is worth eating on its own account. The apple has nothing to do with it.</p>
+    <p>The apple you see when the hog is carried out went in a couple of minutes earlier, round the back, while everyone was still on the Prosecco.</p>
     <h2>So it is for the look of the thing</h2>
-
     <p>That is not a small reason.</p>
-
-    <p>Nobody remembers a tray of food. People remember the moment the whole animal came through the door and the room went quiet, and then loud. A hog roast is theatre before it is dinner. The fire has been lit since morning. Everyone has been smelling it all afternoon. Then it arrives.</p>
-
-    <p>The apple is the last bit of punctuation on a very long sentence.</p>
-
+    <p>Nobody remembers a tray of food. People remember the moment the whole animal came through the door and the room went quiet, and then loud. A hog roast is theatre before it is dinner. The fire has been lit since eight in the morning. Everyone has been smelling it all afternoon across the lawn. Then it arrives.</p>
+    <p>At a wedding this August, ninety-five guests, the hog came through the marquee at five to four, whole, on its board, apple in. Every phone in the room came up. The carving station was already set behind it and the first slice was cut in front of the first guest within five minutes. The apple is the last piece of punctuation on a very long sentence.</p>
     <p>So we put one in. Every time.</p>
-
-    <p>Planning something where you want that moment &mdash; a wedding, a party, a summer do? <a href="/contact">Tell us about it</a> and we will tell you how we would cook it.</p>
+    <h2>Other things people ask about the apple</h2>
+    <p><strong>Does it have to be an apple?</strong> No. Lemons, oranges and pears all turn up in old accounts, and a lemon was common on the boar’s head. An apple is the one people expect, and the one that looks right against the colour of the crackling.</p>
+    <p><strong>Can you eat it?</strong> You can. It has been sitting in the mouth of a roasted pig for a few minutes, so it will taste faintly of smoke and not much else. Most of the time it ends up on the carver’s board and someone’s toddler asks for it.</p>
+    <p><strong>Do you leave it in while you carve?</strong> No. The head comes off the board first at a carving station, or the apple comes out and goes on the side. Carving round it is awkward, and the crackling from the jowl is some of the best on the animal, so you want clear access to it.</p>
+    <p><strong>Does a suckling pig get an apple too?</strong> A small one. Same logic. It is there for the moment it arrives, not for the cooking.</p>
+    <h2>What actually makes the difference</h2>
+    <p>If you are booking a hog roast for a wedding or a party, the apple will be there and it will do its job. The things that decide whether people talk about the food afterwards are less photogenic: how dry the skin was when the fire went under it, whether the crackling came off before service or went soft under the juices, and whether anyone stood there for the last half hour and watched the skin lift. We have written all of that down in <a href="/post/ultimate-guide-to-achieving-the-perfect-pork-crackling">how to get perfect pork crackling</a>, which is the longer and more useful answer.</p>
+    <p>Planning something where you want that moment, a wedding, a party, a summer do? <a href="/contact">Tell us about it</a> and we will tell you how we would cook it, or have a look at <a href="/spit-roasts-hog-roasts">how our hog and spit roasts work</a>.</p>
   </div>
 </section>
 
@@ -102,11 +140,12 @@
       <div><h4>Get in touch</h4><ul><li><a href="tel:+447944390309">07944 390 309</a></li><li><a href="mailto:timclements@thegipsyhillsmokehouse.com">timclements@thegipsyhillsmokehouse.com</a></li><li>121 Central Hill, London, SE19 1BY</li></ul><ul class="social" style="margin-top:14px;"><li><a href="https://www.instagram.com/thegipsyhillsmokehouse" aria-label="Instagram">IG</a></li><li><a href="https://www.facebook.com/thegipsyhillsmokehouse" aria-label="Facebook">FB</a></li><li><a href="https://www.youtube.com/channel/UCNn_UscR8fylPm-OQQEJEKg" aria-label="YouTube">YT</a></li></ul></div>
     </div>
     <div class="footer-bottom"><span>© 2026 The Gipsy Hill Smokehouse</span><span>121 Central Hill, London, SE19 1BY</span>
-      <span><a href="/privacy-policy">Privacy Policy</a> &middot; <a href="/terms-conditions">Terms &amp; Conditions</a></span></div>
+      <span><a href="/privacy-policy">Privacy Policy</a> &middot; <a href="/terms-conditions">Terms &amp; Conditions</a> &middot; <a href="#" data-cookie-settings>Cookie settings</a></span></div>
   </div>
 </footer>
 
-<script src="/script.js?v=20260821b"></script>
+<script src="/script.js?v=20261109b"></script>
 <script src="/search.js?v=20260821b" defer></script>
+<script src="/cookie-consent.js?v=20261109c" defer></script>
 </body>
 </html>

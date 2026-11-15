@@ -2,19 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- Google tag + Consent Mode v2 (GHS) - must be the FIRST script in <head> -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    // Analytics and ad cookies are OFF until the visitor accepts (UK PECR / Google Consent Mode v2)
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+    gtag('set', 'ads_data_redaction', true);
+
+    // Returning visitor: switch on whatever they accepted last time
+    // ghs_cc_v2 = granted (both) | analytics | ads | denied
+    try {
+      (function () {
+        var c = localStorage.getItem('ghs_cc_v2');
+        var an = c === 'granted' || c === 'analytics';
+        var ad = c === 'granted' || c === 'ads';
+        if (an || ad) {
+          gtag('consent', 'update', {
+            ad_storage: ad ? 'granted' : 'denied',
+            ad_user_data: ad ? 'granted' : 'denied',
+            ad_personalization: ad ? 'granted' : 'denied',
+            analytics_storage: an ? 'granted' : 'denied'
+          });
+        }
+      })();
+    } catch (e) {}
+
+    gtag('js', new Date());
+    gtag('config', 'AW-355858447');
+    gtag('config', 'G-QC3BZG396T');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-355858447"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>How To Get Perfect Pork Crackling | The Gipsy Hill Smokehouse</title>
-  <meta name="description" content="How to get pork crackling that blisters and shatters rather than going leathery — from twenty years of cooking whole hogs over fire.">
+  <title>How to get perfect pork crackling | The Gipsy Hill Smokehouse</title>
+  <meta name="description" content="Perfect pork crackling comes down to one thing: dry skin. A hog roast caterer on choosing the cut, drying, scoring, salting, cooking time and temperature, fixing chewy crackling and reheating leftovers.">
+  <meta property="og:title" content="How to get perfect pork crackling">
+  <meta property="og:image" content="https://www.thegipsyhillsmokehouse.com/images/hog-roast-1.jpg">
   <link rel="canonical" href="https://www.thegipsyhillsmokehouse.com/post/ultimate-guide-to-achieving-the-perfect-pork-crackling">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=20260821b">
-<style>
-  .tim{background:#fff3cd;border-left:5px solid #d39e00;padding:14px 16px;margin:18px 0;border-radius:6px}
-  .tim strong{display:block;text-transform:uppercase;letter-spacing:.06em;font-size:12px;color:#8a6d00;margin-bottom:6px}
-  .draftbar{background:#d39e00;color:#fff;text-align:center;padding:10px;font-weight:700;letter-spacing:.05em}
-</style>
+  <link rel="stylesheet" href="/styles.css?v=20261106">
+  <style>
+    .post-body { line-height: 1.75; }
+    .post-body p { margin-bottom: 1.4em; }
+    .post-body h2 { margin-top: 2em; margin-bottom: 0.6em; }
+  </style>
 </head>
 <body>
 
@@ -40,91 +80,83 @@
         <li class="has-sub"><a href="#">Our Story</a><ul class="submenu"><li><a href="/our-story">Our Story</a></li>
             <li><a href="/blog">Journal</a></li>
             <li><a href="/testimonials">Testimonials</a></li><li><a href="/gallery">Photos</a></li></ul></li>
-        <li class="has-sub"><a href="#">Menus</a><ul class="submenu"><li><a href="/wedding-menus">Wedding Menus</a></li><li><a href="/spit-roasts-hog-roasts">Hog Roasts</a></li></ul></li>
+        <li class="has-sub"><a href="#">Menus</a><ul class="submenu"><li><a href="/wedding-menus">Wedding Menus</a></li><li><a href="/gipsy-hill-smokehouse-menu">Catering Menu</a></li><li><a href="/spit-roasts-hog-roasts">Hog Roasts</a></li></ul></li>
         <li><a href="/contact">Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<div class="draftbar">DRAFT — NOT PUBLISHED. Yellow blocks are questions for Tim.</div>
-
 <section class="page-hero">
-  <h1>How To Get Perfect Pork Crackling</h1>
-  <p>Why it goes leathery, and what actually fixes it.</p>
+  <h1>How to get perfect pork crackling</h1>
+  <p>Dry pork skin, hard salt, and the heat at the right end of the cook. The method we use on a 60kg hog, scaled down to the joint in your oven.</p>
 </section>
 
 <section>
-  <div class="container narrow">
-
-    <p>You can hear good crackling from across a garden.</p>
-
-    <p>That is the test, and it is the only one that matters. Not the colour, not the photograph. The sound it makes when it goes. Good crackling shatters. Bad crackling bends, and everyone is too polite to say so.</p>
-
-    <p>Most of what goes wrong happens hours before the pig gets anywhere near a fire.</p>
-
-    <h2>What crackling actually is</h2>
-
-    <p>Pork skin is water, fat and collagen. To turn it into crackling you have to get the water out and the fat rendered, and then hit what is left with enough heat that it puffs and sets hard.</p>
-
-    <p>Do those in the wrong order and you get leather. Skin that still holds water will steam itself no matter how hot your fire is &mdash; you are effectively boiling it under its own moisture. That is the single most common reason crackling fails, at home and on the professional rigs.</p>
-
-    <p>So the whole job is: dry it, render it, then blast it.</p>
-
-    <h2>1. Drying the skin</h2>
-
-    <p class="tim"><strong>Tim — your method</strong>
-    What do you actually do to the skin before it goes near the fire, and how far ahead? Overnight uncovered? Salted and left? Wiped down on the morning? And does a whole hog get treated differently from a shoulder or a belly?</p>
-
-    <h2>2. Scoring</h2>
-
-    <p>Scoring gives the fat a way out and gives the skin somewhere to move as it tightens.</p>
-
-    <p class="tim"><strong>Tim — your method</strong>
-    How do you score, how deep, and how far apart? Do you score a whole hog at all, or only the joints? And what happens if someone cuts through into the meat &mdash; is that the mistake it is made out to be?</p>
-
-    <h2>3. Salt</h2>
-
-    <p>Salt pulls water out of the skin, which is why it is a drying tool as much as a seasoning one.</p>
-
-    <p class="tim"><strong>Tim — your method</strong>
-    What salt, how much, when does it go on, and does any come off again before cooking? Oil or no oil? People online are very confident about this and mostly contradict each other, so I would rather have yours.</p>
-
-    <h2>4. The fire</h2>
-
-    <p>This is where a whole hog stops resembling anything that happens in a domestic oven. A hog is cooked for hours at a temperature that would be far too low to crackle anything, and the skin has to survive all of it in a condition where it can still be brought up at the end.</p>
-
-    <p class="tim"><strong>Tim — your method</strong>
-    Roughly how long is a hog on for, and at what sort of heat? Where is the fire in relation to the skin, and how does that change through the cook? Is the crackling made at the end in a final blast, or is it being managed the whole way through? This is the part nobody writing about crackling online has actually done, so the more specific you are the better.</p>
-
-    <h2>The mistake nearly everyone makes</h2>
-
-    <p class="tim"><strong>Tim — the one thing</strong>
-    If you could correct one thing people do, what is it? Ideally the specific version of it &mdash; the equivalent of the whole lemon instead of the lemon juice.</p>
-
-    <h2>If it is coming out leathery</h2>
-
-    <p>There is usually a window where it can still be rescued.</p>
-
-    <p class="tim"><strong>Tim — the rescue</strong>
-    What do you do when it is going wrong mid-cook and you have got a hundred people arriving in an hour? That practical bit is worth more than all the theory above it.</p>
-
-    <h2>Does the weather matter?</h2>
-
-    <p>People will tell you that you cannot get crackling on a damp day.</p>
-
-    <p class="tim"><strong>Tim — true or not?</strong>
-    Does humidity genuinely change what you do, or is it an excuse? You have cooked outdoors through twenty British summers, so you are better placed than anyone to settle it.</p>
-
-    <h2>At home</h2>
-
-    <p>Most people reading this are not cooking a whole animal. They have got a shoulder or a belly and a domestic oven.</p>
-
-    <p class="tim"><strong>Tim — the home version</strong>
-    What is the honest home method? Also: the old version of this post recommended microwaving crackling in a bag. Do you want to knock that on the head, or would you rather not mention it at all?</p>
-
-    <p>Want the whole thing done properly, with someone else watching the fire? <a href="/contact">Tell us about your event</a>.</p>
-
+  <div class="container narrow post-body">
+    <p>Crackling fails for one reason. Water.</p>
+    <p>Pork skin that still holds moisture steams before it can crisp, and once it has steamed you are cooking leather. Every step below is about getting the water out of the skin first and putting the heat in last. Get that order right and crispy pork crackling is not luck. Get it wrong and no amount of oven time will save it.</p>
+    <p>We cook whole pigs over fire for a living. At a wedding this August, ninety-five guests, the hog went on the fire at eight in the morning and came through the marquee whole at five to four. The crackling had come off it twenty minutes earlier and was sitting in its own tray on the pass, because crackling that stays on the animal through service does not survive service. More on that below. The point is that the rules are the same on a 2kg pork shoulder in a domestic oven. The scale changes. The physics does not.</p>
+    <p><img src="/images/hog-roast-1.jpg" alt="Whole hog on the spit with scored, blistered crackling, cooked by The Gipsy Hill Smokehouse" style="display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;object-position:center;border-radius:var(--radius);" width="900" height="600"></p>
+    <h2>Which cut of pork gives the best crackling</h2>
+    <p>Any cut with the skin still on will give you pork crackling. Three are worth knowing about.</p>
+    <p><strong>Pork belly</strong> has the thickest, most even layer of fat under the skin, which is why belly crackling is the reliable one. The fat renders up into the skin as it cooks and keeps the meat forgiving under a long cook. If you have never made crackling before, start with belly.</p>
+    <p><strong>Pork shoulder</strong>, bone in or boneless, is what most people mean by a Sunday pork roast. The skin is a little tougher and the joint is an awkward shape, so levelling it matters (see the heat section). The meat takes a long, slow cook well and stays moist. Boneless pork shoulder rolled and tied gives you a flat top, which helps.</p>
+    <p><strong>Pork loin</strong> is leaner. The crackling is fine, the meat is less forgiving, and the window between cooked and dry is narrower. Worth it for the crackling if you watch the meat with a probe.</p>
+    <p>Whatever the cut, ask the butcher to leave the skin on and not to score it. Supermarket scoring is nearly always too shallow to matter and you will be doing it again yourself anyway. One more thing: skin that has been sitting under plastic film for days holds moisture against itself. Buy it the day before and start the drying the moment it comes home.</p>
+    <h2>Dry the pork skin properly, not for twenty minutes</h2>
+    <p>Take the joint out of the packaging. Pat the skin down with kitchen paper until the paper comes away dry. Then put it uncovered on a rack in the fridge, skin side up, for 24 hours. Overnight will do. A full day is better.</p>
+    <p>A fridge is a dehumidifier with a light in it. That is the whole trick, and it is free. Every other method on this page is a way of finishing what the fridge started.</p>
+    <p>If you are short of time, a hairdryer on cold, held 30cm off the skin for five minutes, gets you most of the way there. It looks ridiculous and it works.</p>
+    <h2>Scoring the skin: into the fat, not into the meat</h2>
+    <p>Score lines about 1cm apart, straight across the joint. Cut through the skin and about halfway into the fat underneath, and then stop.</p>
+    <p>Cut into the meat and you have opened a channel for juice to come up through the skin while it cooks. That puts water back exactly where you have spent a day removing it. It is the most common mistake we see, and it undoes everything else.</p>
+    <p>Use a clean scalpel or a new Stanley blade rather than a kitchen knife. A chef’s knife drags the skin and tears it, and the tearing is what gives you those ragged bald patches. On a whole hog we score with a scalpel and it takes about 25 minutes. On a joint it is two.</p>
+    <p>On a joint, straight lines are all you need. The herringbone you can see on the hog in the photograph is how we score a whole animal, where sixty kilos of skin has to lift evenly across the ribs. On a 2kg joint it is more cuts than you need, and every extra cut is another place for juice to come through.</p>
+    <h2>Salt, wait, wipe, and re-salt</h2>
+    <p>Fine salt, worked into the scores with your fingers. Leave it 30 to 40 minutes.</p>
+    <p>Come back and you will see beads of moisture sitting on the surface of the skin. That is the salt pulling out the last of the water. Wipe every bead off with kitchen paper and re-salt lightly.</p>
+    <p>This is the step nearly everyone skips, and it is the difference between good crackling and the crackling people talk about afterwards. Leave those beads on and put the joint in the oven, and you have re-wetted the skin at the exact moment you needed it bone dry.</p>
+    <p>You will read a lot about salt and oil. Oil does very little. It helps the salt cling and it browns the surface a shade earlier, but dry skin and salt are doing the work. If you like to rub oil in, do it after the wipe, lightly, and no sooner.</p>
+    <h2>Cooking time and temperature for crispy crackling</h2>
+    <p>In a domestic oven: 240&deg;C for the first 25 minutes, then straight down to 160&deg;C for the rest of the cook. The initial blast blisters the skin. The long low stretch cooks the meat without drying it out.</p>
+    <p>A 2kg shoulder or belly wants around two and a half hours in total. A loin will be quicker. Cook the meat by temperature rather than by the clock: a probe in the thickest part should read 70&deg;C and hold there for two minutes. The crackling is done when it looks done, and the two do not always coincide. If the meat is there and the skin is not, cut the crackling off and finish it on its own (there is a section on that below).</p>
+    <p>Level the joint so the skin sits flat. Heat will not blister a surface it hits at an angle, which is why one end comes out perfect and the other stays pale and chewy. Scrunched foil balls under the low side, or a couple of onion halves, and the whole sheet crackles evenly. This one adjustment fixes more uneven crackling than any other.</p>
+    <p>Fan ovens run hotter and drier at the surface, which helps. If yours is a fan oven, 220&deg;C for the blast is enough.</p>
+    <h2>How we do it on a whole hog</h2>
+    <p>On a hog the order is reversed, and the reason is worth knowing because it tells you what the heat is actually for.</p>
+    <p>The pig goes on over a low, wide bed of embers first thing in the morning, skin turned away from direct flame, and stays there for six hours or so. The fat renders slowly and the meat cooks through. Then, in the last 25 minutes, we rake the fire right up under the skin and stand there and watch it. The skin lifts and pops across the whole animal at once. It is the noisiest and least relaxing part of the day, and it is the part the food is judged on.</p>
+    <p>The oven blast at the start of a joint and the raked fire at the end of a hog are doing the same job: a short period of hard, direct heat on skin that is already dry. When you put it in the cook is a matter of what you are cooking. Which is why the joint method works, and why the “low and slow all the way through” method you will see on some barbecue forums produces a soft, rubbery skin. It never gets its blast.</p>
+    <h2>Resting the pork roast: never under foil</h2>
+    <p>Rest the meat. Never under foil.</p>
+    <p>Foil traps steam, and steam softens crackling in about four minutes. If the meat needs to rest and the crackling is ready, take the crackling off, break it into pieces, and hold it on a wire rack somewhere warm and open. Rest the meat on its own.</p>
+    <p>At an event the crackling comes off the animal before anything goes out. It lives in its own tray, on a rack, on the pass, and it is served as its own thing. Carve a hog with the crackling still on it and by the time the queue reaches the back of the marquee it has gone soft under the juices. The same thing happens on a smaller scale if you carve a joint with the crackling attached and leave it sitting on the board.</p>
+    <h2>When pork crackling goes wrong</h2>
+    <p>Three failures cover nearly every disappointing pork roast.</p>
+    <h3>Pork crackling not crispy, or crackling that has gone chewy</h3>
+    <p>The skin was still wet when the heat went in. Either the drying was too short, the beads were not wiped after salting, or the joint was wrapped or covered at some point. The fix is the same in every case: cut the skin off the joint in one sheet, put it on a tray on its own, and back into the oven at 240&deg;C for 8 to 12 minutes, or under a grill if you are prepared to stand there and not move.</p>
+    <p>Off the meat it has nothing steaming it from below, and skin that refused to crackle for two hours will often go in ten minutes. Watch it. It turns from pale to perfect to burnt faster than seems reasonable.</p>
+    <h3>Uneven crackling: one end done, the other pale</h3>
+    <p>The joint was not level, so the heat hit one end square and the other at an angle. Foil balls or onion halves under the low side before the cook. If you only notice at the end, cut the pale section off and finish it on its own as above.</p>
+    <h3>Crackling that is hard rather than crisp</h3>
+    <p>Too much heat for too long, usually a joint left at 240&deg;C for the whole cook, or belly with a thin fat layer. Drop to 160&deg;C after the blast. Choose belly or shoulder with a proper fat layer under the skin. Hard crackling is also what you get from skin that was scored too deep, because the fat that should have rendered into the skin ran out through the cuts instead.</p>
+    <h2>Leftover crackling: storing and reheating</h2>
+    <p>Keep leftover crackling separate from the meat, in an airtight container, in the fridge, and eat it within two days. Left in with the meat it soaks up the juices and goes soft overnight.</p>
+    <p>To bring it back, spread it on a tray in a hot oven, 200&deg;C, for four or five minutes, or a couple of minutes in an air fryer. It will crisp up again as it cools. A microwave will heat it through and leave it chewy, so if that is all you have, eat it cold. Cold crackling is not a compromise. It is what the kitchen eats at the end of the night.</p>
+    <h2>Can you make pork crackling on its own?</h2>
+    <p>Yes, and it is the answer to the question we get asked most at the buffet, which is whether there is any more.</p>
+    <p>Ask a butcher for a sheet of pork skin, sometimes sold as pork rind, with a thin layer of fat still on. Dry it, score it, salt it, wait and wipe, exactly as above. Then onto a rack over a tray at 240&deg;C for 20 to 30 minutes, until it has blistered right across. It will curl. Weigh the corners down with a second rack if that bothers you.</p>
+    <p>This is also the best way to get crackling for a crowd, because you are not limited by the surface area of one joint.</p>
+    <h2>Does pouring boiling water over the skin help?</h2>
+    <p>It does, but only if you then dry the skin again completely.</p>
+    <p>Boiling water opens the scores and starts rendering the surface fat, which is useful. It also puts water on skin you are about to spend a day drying. So if you are going to do it, do it before the fridge stage: pour, pat dry hard, then leave it uncovered overnight. Do it an hour before cooking and you have made things worse.</p>
+    <h2>What to serve with roast pork and crackling</h2>
+    <p>At a hog roast the crackling goes out on its own with apple sauce, and people eat it standing up before they have found a plate. At home the same rule holds: serve it in pieces on the side, not on top of the meat, and give it something sharp. Apple sauce, or a wedge of lemon on the plate, cuts the fat.</p>
+    <p>For the rest of the plate, roast potatoes done in the fat from the tray, greens, and a gravy made from the pan juices. If you want to feed a lot of people from one pig, the <a href="/gipsy-hill-smokehouse-menu#salads-and-sides">sides we put out with a hog roast</a> are on a separate page.</p>
+    <h2>The short version</h2>
+    <p>Dry skin, a full day in the fridge uncovered. Score to the fat, not the meat. Salt, wait, wipe, re-salt. Heat hard at one end of the cook only. Never rest it under foil. And if it has not crackled, take it off the joint and give it ten minutes on its own.</p>
+    <p>Nobody gets all of that right the first time. The one that catches everybody is the wipe, and it is the difference between crackling and perfect pork crackling.</p>
+    <p>If you would rather someone else stood over the fire for seven hours, that is what we do. Have a look at <a href="/spit-roasts-hog-roasts">how our hog and spit roasts work</a>, or read <a href="/post/why-is-an-apple-placed-in-the-mouth-of-a-hog-roast">why there is an apple in its mouth</a>, which is a shorter and less useful answer but a more entertaining one.</p>
   </div>
 </section>
 
@@ -140,17 +172,18 @@
 <footer class="site-footer">
   <div class="container">
     <div class="footer-cols">
-      <div><h4>The Smokehouse</h4><ul><li><a href="/">Home</a></li><li><a href="/our-food">Our Food</a></li><li><a href="/testimonials">Testimonials</a></li><li><a href="/gallery">Photos</a></li><li><a href="/blog">Journal</a></li></ul></div>
+      <div><h4>The Smokehouse</h4><ul><li><a href="/">Home</a></li><li><a href="/our-food">Our Food</a></li><li><a href="/testimonials">Testimonials</a></li><li><a href="/gallery">Photos</a></li></ul></div>
       <div><h4>Catering</h4><ul><li><a href="/wedding-catering">Weddings</a></li><li><a href="/private-parties">Private Parties</a></li><li><a href="/event-catering">Corporate Events</a></li><li><a href="/spit-roasts-hog-roasts">Hog &amp; Spit Roasts</a></li></ul></div>
       <div><h4>Menus</h4><ul><li><a href="/wedding-menus">Wedding Menus</a></li><li><a href="/our-food">Barbecue Menus</a></li><li><a href="/contact">Get a Quote</a></li></ul></div>
       <div><h4>Get in touch</h4><ul><li><a href="tel:+447944390309">07944 390 309</a></li><li><a href="mailto:timclements@thegipsyhillsmokehouse.com">timclements@thegipsyhillsmokehouse.com</a></li><li>121 Central Hill, London, SE19 1BY</li></ul><ul class="social" style="margin-top:14px;"><li><a href="https://www.instagram.com/thegipsyhillsmokehouse" aria-label="Instagram">IG</a></li><li><a href="https://www.facebook.com/thegipsyhillsmokehouse" aria-label="Facebook">FB</a></li><li><a href="https://www.youtube.com/channel/UCNn_UscR8fylPm-OQQEJEKg" aria-label="YouTube">YT</a></li></ul></div>
     </div>
     <div class="footer-bottom"><span>© 2026 The Gipsy Hill Smokehouse</span><span>121 Central Hill, London, SE19 1BY</span>
-      <span><a href="/privacy-policy">Privacy Policy</a> &middot; <a href="/terms-conditions">Terms &amp; Conditions</a></span></div>
+      <span><a href="/privacy-policy">Privacy Policy</a> &middot; <a href="/terms-conditions">Terms &amp; Conditions</a> &middot; <a href="#" data-cookie-settings>Cookie settings</a></span></div>
   </div>
 </footer>
 
-<script src="/script.js?v=20260821b"></script>
+<script src="/script.js?v=20261109b"></script>
 <script src="/search.js?v=20260821b" defer></script>
+<script src="/cookie-consent.js?v=20261109c" defer></script>
 </body>
 </html>

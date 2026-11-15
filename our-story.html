@@ -2,6 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- Google tag + Consent Mode v2 (GHS) - must be the FIRST script in <head> -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    // Analytics and ad cookies are OFF until the visitor accepts (UK PECR / Google Consent Mode v2)
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+    gtag('set', 'ads_data_redaction', true);
+
+    // Returning visitor: switch on whatever they accepted last time
+    // ghs_cc_v2 = granted (both) | analytics | ads | denied
+    try {
+      (function () {
+        var c = localStorage.getItem('ghs_cc_v2');
+        var an = c === 'granted' || c === 'analytics';
+        var ad = c === 'granted' || c === 'ads';
+        if (an || ad) {
+          gtag('consent', 'update', {
+            ad_storage: ad ? 'granted' : 'denied',
+            ad_user_data: ad ? 'granted' : 'denied',
+            ad_personalization: ad ? 'granted' : 'denied',
+            analytics_storage: an ? 'granted' : 'denied'
+          });
+        }
+      })();
+    } catch (e) {}
+
+    gtag('js', new Date());
+    gtag('config', 'AW-355858447');
+    gtag('config', 'G-QC3BZG396T');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-355858447"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Our Story | The Gipsy Hill Smokehouse</title>
   <meta name="description" content="From a whole hog on a London street corner in 2004 to Borough Market, the festivals and the Smokehouse. Twenty years of hog roast, spit roast and barbecue catering.">
@@ -9,7 +47,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=20260821b">
+  <link rel="stylesheet" href="/styles.css?v=20261106">
 </head>
 <body>
 
@@ -35,7 +73,7 @@
         <li class="has-sub"><a href="#">Our Story</a><ul class="submenu"><li><a href="/our-story">Our Story</a></li>
             <li><a href="/blog">Journal</a></li>
             <li><a href="/testimonials">Testimonials</a></li><li><a href="/gallery">Photos</a></li></ul></li>
-        <li class="has-sub"><a href="#">Menus</a><ul class="submenu"><li><a href="/wedding-menus">Wedding Menus</a></li><li><a href="/spit-roasts-hog-roasts">Hog Roasts</a></li></ul></li>
+        <li class="has-sub"><a href="#">Menus</a><ul class="submenu"><li><a href="/wedding-menus">Wedding Menus</a></li><li><a href="/gipsy-hill-smokehouse-menu">Catering Menu</a></li><li><a href="/spit-roasts-hog-roasts">Hog Roasts</a></li></ul></li>
         <li><a href="/contact">Contact</a></li>
       </ul>
     </nav>
@@ -84,11 +122,12 @@
       <div><h4>Get in touch</h4><ul><li><a href="tel:+447944390309">07944 390 309</a></li><li><a href="mailto:timclements@thegipsyhillsmokehouse.com">timclements@thegipsyhillsmokehouse.com</a></li><li>121 Central Hill, London, SE19 1BY</li></ul><ul class="social" style="margin-top:14px;"><li><a href="https://www.instagram.com/thegipsyhillsmokehouse" aria-label="Instagram">IG</a></li><li><a href="https://www.facebook.com/thegipsyhillsmokehouse" aria-label="Facebook">FB</a></li><li><a href="https://www.youtube.com/channel/UCNn_UscR8fylPm-OQQEJEKg" aria-label="YouTube">YT</a></li></ul></div>
     </div>
     <div class="footer-bottom"><span>© 2026 The Gipsy Hill Smokehouse</span><span>121 Central Hill, London, SE19 1BY</span>
-      <span><a href="/privacy-policy">Privacy Policy</a> &middot; <a href="/terms-conditions">Terms &amp; Conditions</a></span></div>
+      <span><a href="/privacy-policy">Privacy Policy</a> &middot; <a href="/terms-conditions">Terms &amp; Conditions</a> &middot; <a href="#" data-cookie-settings>Cookie settings</a></span></div>
   </div>
 </footer>
 
-<script src="/script.js?v=20260821b"></script>
+<script src="/script.js?v=20261109b"></script>
 <script src="/search.js?v=20260821b" defer></script>
+<script src="/cookie-consent.js?v=20261109c" defer></script>
 </body>
 </html>

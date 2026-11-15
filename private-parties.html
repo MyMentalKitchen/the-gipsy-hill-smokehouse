@@ -2,14 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- Google tag + Consent Mode v2 (GHS) - must be the FIRST script in <head> -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    // Analytics and ad cookies are OFF until the visitor accepts (UK PECR / Google Consent Mode v2)
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+    gtag('set', 'ads_data_redaction', true);
+
+    // Returning visitor: switch on whatever they accepted last time
+    // ghs_cc_v2 = granted (both) | analytics | ads | denied
+    try {
+      (function () {
+        var c = localStorage.getItem('ghs_cc_v2');
+        var an = c === 'granted' || c === 'analytics';
+        var ad = c === 'granted' || c === 'ads';
+        if (an || ad) {
+          gtag('consent', 'update', {
+            ad_storage: ad ? 'granted' : 'denied',
+            ad_user_data: ad ? 'granted' : 'denied',
+            ad_personalization: ad ? 'granted' : 'denied',
+            analytics_storage: an ? 'granted' : 'denied'
+          });
+        }
+      })();
+    } catch (e) {}
+
+    gtag('js', new Date());
+    gtag('config', 'AW-355858447');
+    gtag('config', 'G-QC3BZG396T');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-355858447"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hog Roast Private Party Catering London | The Gipsy Hill Smokehouse</title>
-  <meta name="description" content="Host an unforgettable private party in London with delicious hog roast, spit roasts, and customized barbecue catering services from The Gipsy Hill Smokehouse, perfect for any celebration.">
+  <title>Hog Roast Parties &amp; Private Party Catering | The Gipsy Hill Smokehouse</title>
+  <meta name="description" content="Hog roast parties for birthdays, anniversaries and family days in London. We bring the spit and the equipment, cook on site, serve your guests and clear away after.">
   <link rel="canonical" href="https://www.thegipsyhillsmokehouse.com/private-parties">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=20260821b">
+  <link rel="stylesheet" href="/styles.css?v=20261106">
+<style>
+/* Review carousel */
+.review-roll { padding: 56px 0 48px; overflow: hidden; }
+.review-roll h2 { text-align: center; margin: 0 0 28px; }
+.review-roll-window { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+.review-roll-track { display: flex; gap: 24px; width: max-content; animation: review-roll 60s linear infinite; }
+.review-roll-window:hover .review-roll-track, .review-roll-window:focus-within .review-roll-track { animation-play-state: paused; }
+.review-roll-card { flex: 0 0 340px; margin: 0; background: var(--secondary); border-left: 4px solid var(--accent); border-radius: var(--radius); padding: 20px 22px; box-shadow: 0 1px 6px rgba(0,0,0,0.05); }
+.review-roll-card p { margin: 0 0 12px; font-size: 16px; line-height: 1.55; }
+.review-roll-card cite { font-style: italic; font-weight: 700; }
+.review-roll-link { text-align: center; margin: 28px 0 0; }
+.review-roll-link a { font-weight: 700; }
+@keyframes review-roll { from { transform: translateX(0); } to { transform: translateX(calc(-50% - 12px)); } }
+@media (max-width: 480px) { .review-roll-card { flex-basis: 270px; } }
+@media (prefers-reduced-motion: reduce) { .review-roll-window { overflow-x: auto; } .review-roll-track { animation: none; } }
+</style>
 </head>
 <body>
 
@@ -35,7 +89,7 @@
         <li class="has-sub"><a href="#">Our Story</a><ul class="submenu"><li><a href="/our-story">Our Story</a></li>
             <li><a href="/blog">Journal</a></li>
             <li><a href="/testimonials">Testimonials</a></li><li><a href="/gallery">Photos</a></li></ul></li>
-        <li class="has-sub"><a href="#">Menus</a><ul class="submenu"><li><a href="/wedding-menus">Wedding Menus</a></li><li><a href="/spit-roasts-hog-roasts">Hog Roasts</a></li></ul></li>
+        <li class="has-sub"><a href="#">Menus</a><ul class="submenu"><li><a href="/wedding-menus">Wedding Menus</a></li><li><a href="/gipsy-hill-smokehouse-menu">Catering Menu</a></li><li><a href="/spit-roasts-hog-roasts">Hog Roasts</a></li></ul></li>
         <li><a href="/contact">Contact</a></li>
       </ul>
     </nav>
@@ -55,8 +109,8 @@
       <img src="/images/roast-lamb.jpg" alt="Roast Lamb">
       <div class="split-content">
         <h2>Our Food</h2>
-        <p>Hog roasts are our speciality and we pride ourselves on the quality of what we offer. Our skills not only include the ability to roast a hog to perfection — we have al fresco dining and barbeques in our veins.</p>
-        <p>As importers of Portuguese speciality foods we offer some of the specialities and dining experiences that Portugal has to offer.</p>
+        <p>A party hog roast is cooked where your guests are. The hog goes on the spit hours before anyone arrives, so by the time the first drinks are poured people can smell it. We carve, serve the salads and sides, and take the equipment away when we're done. We roast lamb and chicken over the fire too, and run a barbecue if you want one. See how <a href="/spit-roasts-hog-roasts">hog roast hire in London</a> works.</p>
+        <p>Portuguese cooking has always shaped our style.</p>
         <p>We started with barbecues offering loins of pork, chicken piri piri, sardine "festas" parties and flaming chouriço, and progressed to another speciality from the North of Portugal.</p>
         <p><a href="/our-food" class="btn btn-primary">Explore Our Menus</a></p>
       </div>
@@ -71,11 +125,11 @@
         <img src="/images/hog-roast.jpg" alt="Hog and Spit Roast Barbeque">
         <div class="card-body"><h3>Hog &amp; Spit Roasts</h3><p>Free range pork, lamb and chicken slow-roasted over fire.</p></div>
       </a>
-      <a href="/wedding-menus" class="card" style="text-decoration:none;color:inherit;">
+      <a href="/gipsy-hill-smokehouse-menu" class="card" style="text-decoration:none;color:inherit;">
         <img src="/images/smoked-salmon-canapes.jpg" alt="Canapés Appetizer">
         <div class="card-body"><h3>Canapés</h3><p>Smoked salmon, blinis, mozzarella tomato — start as you mean to go on.</p></div>
       </a>
-      <a href="/our-food" class="card" style="text-decoration:none;color:inherit;">
+      <a href="/gipsy-hill-smokehouse-menu#salads-and-sides" class="card" style="text-decoration:none;color:inherit;">
         <img src="/images/hog-roast-salads.jpg" alt="Classic Hog Roast Salad">
         <div class="card-body"><h3>Salads</h3><p>Greek, mediterranean roasted veg, baby new potatoes, fancy green leaves.</p></div>
       </a>
@@ -89,7 +143,7 @@
       <img src="/images/roast-hog-borough-market.jpg" alt="Portuguese Specialty Roasted Hog">
       <div class="split-content">
         <h2>The Team</h2>
-        <p>Tim Clements, with a Portuguese background, has imported Portuguese specialities since 1991. Over the years as we promoted Portuguese fine foods we have grown into expert caterers of spit roasts and barbeques.</p>
+        <p>Tim Clements has a Portuguese background, and you can taste it in the food.</p>
         <p>Catering for private parties, corporate organisations, celebrities and royalty.</p>
         <p>
           <a href="/testimonials" class="btn btn-secondary">Read Testimonials</a>
@@ -114,6 +168,66 @@
   </div>
 </section>
 
+<section class="review-roll" aria-label="Client reviews">
+  <div class="container text-center">
+    <span class="section-eyebrow">Testimonials</span>
+    <h2>Kind words from our clients</h2>
+  </div>
+  <div class="review-roll-window" tabindex="0">
+    <div class="review-roll-track">
+        <figure class="review-roll-card">
+          <p>"Easily the best Hog Roast I have ever eaten — in fact the best lunch! Beautiful service, tasty accompaniments, succulent, tender meat…"</p>
+          <cite>— Rebecca &amp; Richard, wedding on Eel Pie Island</cite>
+        </figure>
+        <figure class="review-roll-card">
+          <p>"Everybody was raving about the food and we were still talking about how delicious the lamb was when we woke up on Sunday morning."</p>
+          <cite>— H.J.</cite>
+        </figure>
+        <figure class="review-roll-card">
+          <p>"The service was first class, food first class and attitude of the chief and assistant excellent."</p>
+          <cite>— N.P., birthday party</cite>
+        </figure>
+        <figure class="review-roll-card">
+          <p>"Thank you so much for the fabulous hog your team cooked for my 40th! It was absolutely DELICIOUS and everyone loved it."</p>
+          <cite>— S.P., 40th birthday</cite>
+        </figure>
+        <figure class="review-roll-card">
+          <p>"I heard several claim, in front of their mothers, that it was the best meal they had ever eaten."</p>
+          <cite>— P.R.</cite>
+        </figure>
+        <figure class="review-roll-card">
+          <p>"The guests loved everything they ate. This helped to make a rainy day absolutely fantastic."</p>
+          <cite>— S.I., party</cite>
+        </figure>
+        <figure class="review-roll-card" aria-hidden="true">
+          <p>"Easily the best Hog Roast I have ever eaten — in fact the best lunch! Beautiful service, tasty accompaniments, succulent, tender meat…"</p>
+          <cite>— Rebecca &amp; Richard, wedding on Eel Pie Island</cite>
+        </figure>
+        <figure class="review-roll-card" aria-hidden="true">
+          <p>"Everybody was raving about the food and we were still talking about how delicious the lamb was when we woke up on Sunday morning."</p>
+          <cite>— H.J.</cite>
+        </figure>
+        <figure class="review-roll-card" aria-hidden="true">
+          <p>"The service was first class, food first class and attitude of the chief and assistant excellent."</p>
+          <cite>— N.P., birthday party</cite>
+        </figure>
+        <figure class="review-roll-card" aria-hidden="true">
+          <p>"Thank you so much for the fabulous hog your team cooked for my 40th! It was absolutely DELICIOUS and everyone loved it."</p>
+          <cite>— S.P., 40th birthday</cite>
+        </figure>
+        <figure class="review-roll-card" aria-hidden="true">
+          <p>"I heard several claim, in front of their mothers, that it was the best meal they had ever eaten."</p>
+          <cite>— P.R.</cite>
+        </figure>
+        <figure class="review-roll-card" aria-hidden="true">
+          <p>"The guests loved everything they ate. This helped to make a rainy day absolutely fantastic."</p>
+          <cite>— S.I., party</cite>
+        </figure>
+    </div>
+  </div>
+  <p class="review-roll-link"><a href="/testimonials">Read more testimonials</a></p>
+</section>
+
 <footer class="site-footer">
   <div class="container">
     <div class="footer-cols">
@@ -123,11 +237,12 @@
       <div><h4>Get in touch</h4><ul><li><a href="tel:+447944390309">07944 390 309</a></li><li><a href="mailto:timclements@thegipsyhillsmokehouse.com">timclements@thegipsyhillsmokehouse.com</a></li><li>121 Central Hill, London, SE19 1BY</li></ul><ul class="social" style="margin-top:14px;"><li><a href="https://www.instagram.com/thegipsyhillsmokehouse" aria-label="Instagram">IG</a></li><li><a href="https://www.facebook.com/thegipsyhillsmokehouse" aria-label="Facebook">FB</a></li><li><a href="https://www.youtube.com/channel/UCNn_UscR8fylPm-OQQEJEKg" aria-label="YouTube">YT</a></li></ul></div>
     </div>
     <div class="footer-bottom"><span>© 2026 The Gipsy Hill Smokehouse</span><span>121 Central Hill, London, SE19 1BY</span>
-      <span><a href="/privacy-policy">Privacy Policy</a> &middot; <a href="/terms-conditions">Terms &amp; Conditions</a></span></div>
+      <span><a href="/privacy-policy">Privacy Policy</a> &middot; <a href="/terms-conditions">Terms &amp; Conditions</a> &middot; <a href="#" data-cookie-settings>Cookie settings</a></span></div>
   </div>
 </footer>
 
-<script src="/script.js?v=20260821b"></script>
+<script src="/script.js?v=20261109b"></script>
 <script src="/search.js?v=20260821b" defer></script>
+<script src="/cookie-consent.js?v=20261109c" defer></script>
 </body>
 </html>

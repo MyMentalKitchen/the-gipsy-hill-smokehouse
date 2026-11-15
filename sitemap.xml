@@ -21,6 +21,11 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://www.thegipsyhillsmokehouse.com/hog-roast-catering-beckenham</loc>
+    <lastmod>2026-11-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.thegipsyhillsmokehouse.com/private-parties</loc>
     <lastmod>2026-08-05</lastmod>
     <priority>0.9</priority>
@@ -28,6 +33,11 @@
   <url>
     <loc>https://www.thegipsyhillsmokehouse.com/our-food</loc>
     <lastmod>2026-08-05</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.thegipsyhillsmokehouse.com/gipsy-hill-smokehouse-menu</loc>
+    <lastmod>2026-11-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -71,8 +81,23 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.thegipsyhillsmokehouse.com/post/what-are-the-best-sides-to-pair-with-a-hog-roast</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.thegipsyhillsmokehouse.com/post/ultimate-guide-to-achieving-the-perfect-pork-crackling</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.thegipsyhillsmokehouse.com/blog</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.thegipsyhillsmokehouse.com/post/bottoms-up-what-drinks-to-pair-with-your-delicious-hog-roast</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

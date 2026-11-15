@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag + Consent Mode v2 (GHS) - must be the FIRST script in <head> -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    // Analytics and ad cookies are OFF until the visitor accepts (UK PECR / Google Consent Mode v2)
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+    gtag('set', 'ads_data_redaction', true);
+
+    // Returning visitor: switch on whatever they accepted last time
+    // ghs_cc_v2 = granted (both) | analytics | ads | denied
+    try {
+      (function () {
+        var c = localStorage.getItem('ghs_cc_v2');
+        var an = c === 'granted' || c === 'analytics';
+        var ad = c === 'granted' || c === 'ads';
+        if (an || ad) {
+          gtag('consent', 'update', {
+            ad_storage: ad ? 'granted' : 'denied',
+            ad_user_data: ad ? 'granted' : 'denied',
+            ad_personalization: ad ? 'granted' : 'denied',
+            analytics_storage: an ? 'granted' : 'denied'
+          });
+        }
+      })();
+    } catch (e) {}
+
+    gtag('js', new Date());
+    gtag('config', 'AW-355858447');
+    gtag('config', 'G-QC3BZG396T');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-355858447"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hog Roast &amp; Live-Fire Catering in London | The Gipsy Hill Smokehouse</title>
+  <meta name="description" content="Hog roasts, lamb, chicken and BBQ cooked over fire for weddings, parties and company events across London. Chefs, staff and equipment included.">
+  <!-- Ad landing page: kept out of search so it never competes with the homepage -->
+  <meta name="robots" content="noindex, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=20261106">
+<style>
+/* Ad landing page only (hog-roast-catering). Built on the shared styles.css. */
+@media (max-width: 860px) {
+  .site-header { padding: 10px 0; }
+  .brand { flex: 1 1 0; min-width: 0; gap: 10px; }
+  .brand-name { display: block; line-height: 1.15; font-size: 16px; }
+  .brand img { width: 44px; height: 44px; }
+  .brand br, .brand-tag { display: none; }
+}
+.site-header .container { flex-wrap: nowrap; }
+.lp-phone {
+  flex: 0 0 auto;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text);
+  white-space: nowrap;
+}
+.lp-phone span { color: #555; font-weight: 600; font-size: 13px; margin-right: 6px; }
+@media (max-width: 480px) { .lp-phone span { display: none; } .lp-phone { font-size: 15px; } }
+
+/* Hero with the form in the first screen */
+.lp-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 36px 0 48px;
+  color: #fff;
+}
+.lp-hero::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.5); }
+.lp-hero .container { position: relative; }
+.lp-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.lp-hero h1 {
+  color: #fff;
+  font-size: clamp(32px, 4.6vw, 52px);
+  margin-bottom: 0.4em;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.4);
+}
+.lp-sub { font-size: clamp(16px, 1.8vw, 19px); margin-bottom: 1.2em; }
+.lp-proof { font-size: 13px; letter-spacing: 0.03em; opacity: 0.92; margin: 0; }
+.lp-form.form-card {
+  color: var(--text);
+  max-width: none;
+  margin: 0;
+  padding: 28px;
+}
+.lp-form h2 { font-size: clamp(22px, 2.4vw, 28px); margin-bottom: 4px; }
+.lp-form .lp-form-intro { color: #444; margin-bottom: 18px; }
+.lp-form .form-row { margin-bottom: 12px; }
+.lp-form .form-row textarea { min-height: 0; }
+.lp-form-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 14px; }
+.lp-form .req { color: #b3261e; }
+.lp-form .form-actions { margin-top: 16px; }
+.lp-form .form-actions .btn { width: 100%; font-size: 15px; padding: 14px 20px; }
+.lp-form .form-status { text-align: center; }
+.lp-form-call { text-align: center; margin: 12px 0 0; font-size: 15px; }
+.lp-form-call a { color: var(--text); font-weight: 700; text-decoration: underline; }
+
+/* What you get */
+.lp-get {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.lp-get .card img { height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.lp-get .card-body h3 { font-size: 20px; margin-bottom: 8px; }
+
+/* Who we cook for */
+.lp-who .card-body .lp-link { font-weight: 700; margin-top: 8px; }
+
+.lp-final h2 { margin-bottom: 20px; }
+.lp-final .lp-or { margin: 16px 0 0; }
+.lp-final .lp-or a { color: var(--text); font-weight: 700; text-decoration: underline; }
+
+/* Slim footer */
+.lp-footer { padding: 28px 0; }
+.lp-footer .footer-bottom { border-top: 0; padding-top: 0; }
+
+/* Mobile sticky Call / Enquire bar */
+.lp-sticky { display: none; }
+
+@media (max-width: 1000px) {
+  .lp-get { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 860px) {
+  .lp-hero { padding: 28px 0 36px; }
+  .lp-hero-grid { grid-template-columns: 1fr; gap: 22px; }
+  .lp-form.form-card { padding: 22px 18px; }
+  body { padding-bottom: 68px; }
+  .lp-sticky {
+    display: flex;
+    gap: 10px;
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 90;
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    background: var(--bg);
+    border-top: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.08);
+  }
+  .lp-sticky .btn { flex: 1 1 0; text-align: center; padding: 12px 10px; margin: 0; }
+  /* Hide while the cookie banner is up, so the two never overlap */
+  html.ghs-cc-open .lp-sticky,
+  body:has(#ghs-cc) .lp-sticky { display: none; }
+}
+@media (max-width: 480px) {
+  .lp-form-2col { grid-template-columns: 1fr; }
+  .lp-get { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="brand">
+      <img src="/images/the-gipsy-hill-smokehouse.jpg" alt="The Gipsy Hill Smokehouse logo">
+      <span>
+        <span class="brand-name">The Gipsy Hill Smokehouse</span><br>
+        <span class="brand-tag">Hog Roast &amp; BBQ Catering · London</span>
+      </span>
+    </a>
+    <a class="lp-phone" href="tel:+447944390309"><span>Call</span>07944 390 309</a>
+  </div>
+</header>
+
+<main>
+
+<section class="lp-hero" style="background-image:url('/images/hog-roast-catering-rotisserie-chickens.jpg');">
+  <div class="container">
+    <div class="lp-hero-grid">
+      <div class="lp-hero-text">
+        <h1>Hog Roast &amp; Live-Fire Catering in London</h1>
+        <p class="lp-sub">Whole hogs on the spit, lamb, chicken and BBQ, cooked over fire at your wedding, party or company event. We bring the chefs, the staff and the equipment, and we clear up after.</p>
+        <p class="lp-proof">Cooking for London since 2004 · Started at Borough Market · Gordon Ramsay's F-Word · The Fat Duck</p>
+      </div>
+
+      <form class="form-card lp-form" id="ads-enquiry-form" action="https://formspree.io/f/mqeryylv" method="POST">
+        <h2>Tell us about your event</h2>
+        <p class="lp-form-intro">We'll come back to you within 24 hours.</p>
+
+        <div class="form-row"><label for="f-name">Your name <span class="req" aria-hidden="true">*</span></label><input id="f-name" type="text" name="name" autocomplete="name" required></div>
+        <div class="lp-form-2col">
+          <div class="form-row"><label for="f-phone">Phone <span class="req" aria-hidden="true">*</span></label><input id="f-phone" type="tel" name="phone" autocomplete="tel" required></div>
+          <div class="form-row"><label for="f-email">Email <span class="req" aria-hidden="true">*</span></label><input id="f-email" type="email" name="email" autocomplete="email" required></div>
+          <div class="form-row"><label for="f-date">Event date <span class="req" aria-hidden="true">*</span></label><input id="f-date" type="date" name="event_date" required></div>
+          <div class="form-row"><label for="f-guests">Number of guests <span class="req" aria-hidden="true">*</span></label><input id="f-guests" type="number" name="guests" min="1" inputmode="numeric" required></div>
+          <div class="form-row"><label for="f-type">Type of event <span class="req" aria-hidden="true">*</span></label>
+            <select id="f-type" name="event_type" required>
+              <option value="" disabled selected>Choose one</option>
+              <option>Wedding</option>
+              <option>Private party</option>
+              <option>Corporate event</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-row"><label for="f-venue">Venue or postcode</label><input id="f-venue" type="text" name="venue"></div>
+        </div>
+        <div class="form-row"><label for="f-message">Anything else we should know?</label><textarea id="f-message" name="message" rows="3"></textarea></div>
+
+        <input type="hidden" name="_subject" value="Enquiry from Google Ads page">
+        <input type="hidden" name="source" value="google-ads-landing">
+
+        <div class="form-actions"><button type="submit" class="btn btn-primary">Send my enquiry</button></div>
+        <p class="form-status" role="status"></p>
+        <p class="lp-form-call">Rather talk? Call Tim on <a href="tel:+447944390309">07944 390 309</a>.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2 class="section-title">Everything's taken care of</h2>
+    <div class="lp-get">
+      <div class="card">
+        <img src="/images/hog-roast-whole-hog-on-the-spit.jpg" alt="Whole hog roasting on the spit with scored crackling" width="1000" height="667" loading="lazy">
+        <div class="card-body">
+          <h3>The fire</h3>
+          <p>The hog goes on the spit hours before your guests arrive. They'll smell it before they see it.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/images/hog-roast-salads.jpg" alt="Salads and sides laid out for service" width="600" height="500" loading="lazy">
+        <div class="card-body">
+          <h3>The food</h3>
+          <p>Free-range pork in a porchetta marinade of fennel, rosemary and garlic. Lamb, chicken, barbecue and Portuguese dishes, with salads, sides and desserts. Vegetarian, vegan and allergy needs handled properly.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/images/the-gipsy-hill-smokehouse-team.jpg" alt="Four of the Smokehouse team smiling by the van at an event" width="1000" height="750" loading="lazy">
+        <div class="card-body">
+          <h3>The people</h3>
+          <p>Chefs and waiting staff who run the food side of your day, from setup to clear-up.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/images/wedding-marquee-tables-set.jpg" alt="Marquee with long tables laid for dinner" width="800" height="1000" loading="lazy">
+        <div class="card-body">
+          <h3>The equipment</h3>
+          <p>Ovens, serving equipment, crockery and cutlery when you need them.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cream lp-who">
+  <div class="container">
+    <h2 class="section-title">Who we cook for</h2>
+    <div class="cards">
+      <a href="#ads-enquiry-form" class="card lp-to-form" style="text-decoration:none;color:inherit;">
+        <img src="/images/wedding-marquee-at-night.jpg" alt="Lit wedding marquee at night with guests at dinner" width="900" height="675" loading="lazy">
+        <div class="card-body">
+          <h3>Weddings</h3>
+          <p>A feast your guests will talk about, served the way you want it.</p>
+          <span class="lp-link">Tell us your date &rarr;</span>
+        </div>
+      </a>
+      <a href="#ads-enquiry-form" class="card lp-to-form" style="text-decoration:none;color:inherit;">
+        <img src="/images/private-party-garden-festoon-lights.jpg" alt="Garden party set-up with the barbecue under festoon lights" width="900" height="675" loading="lazy">
+        <div class="card-body">
+          <h3>Private parties</h3>
+          <p>Birthdays, anniversaries and garden parties, cooked in front of your guests.</p>
+          <span class="lp-link">Tell us your date &rarr;</span>
+        </div>
+      </a>
+      <a href="#ads-enquiry-form" class="card lp-to-form" style="text-decoration:none;color:inherit;">
+        <img src="/images/corporate-event-chef-at-the-fire.jpg" alt="Chef cooking over live fire at an outdoor event" width="900" height="675" loading="lazy">
+        <div class="card-body">
+          <h3>Company events</h3>
+          <p>Summer parties and team days, with the chefs at the fire.</p>
+          <span class="lp-link">Tell us your date &rarr;</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2 class="section-title">What our clients say</h2>
+    <div class="quote-list">
+      <div class="quote">
+        <p>"Tim and his team catered my daughter's wedding reception for 140 people… offering flexible menu ideas and advice with options for all our varied dietary requirements! The whole process ran so smoothly and the day itself was a huge success."</p>
+        <p class="quote-author">— Jane, wedding</p>
+      </div>
+      <div class="quote">
+        <p>"Two legs of lamb marinated Moroccan style — properly tender and full of flavour… If you want a private chef or proper barbecue catering in South East London, I can't recommend them enough."</p>
+        <p class="quote-author">— Chris, private barbecue</p>
+      </div>
+      <div class="quote">
+        <p>"He took seriously our concerns about guests with allergies and provided solutions… nothing was too much trouble for Tim."</p>
+        <p class="quote-author">— Paula, garden party for 60</p>
+      </div>
+    </div>
+    <p class="text-center mt-2"><a href="https://maps.google.com/?cid=8242177040825539879" target="_blank" rel="noopener">Read all our Google reviews</a></p>
+  </div>
+</section>
+
+<section class="cream tight">
+  <div class="container">
+    <h2 class="section-title" style="margin-bottom:12px;">Where we cook</h2>
+    <p class="section-intro" style="margin-bottom:0;">We're based in Gipsy Hill, SE19, and cook at homes and venues across London, Surrey and Kent.</p>
+  </div>
+</section>
+
+<section class="sage lp-final">
+  <div class="container text-center">
+    <h2>Tell us the date and numbers. We'll do the rest.</h2>
+    <a href="#ads-enquiry-form" class="btn btn-primary lp-to-form">Start your enquiry</a>
+    <p class="lp-or">or call <a href="tel:+447944390309">07944 390 309</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer lp-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>The Gipsy Hill Smokehouse · 121 Central Hill, London, SE19 1BY</span>
+      <span><a href="tel:+447944390309">07944 390 309</a> &middot; <a href="mailto:timclements@thegipsyhillsmokehouse.com">timclements@thegipsyhillsmokehouse.com</a></span>
+      <span><a href="/privacy-policy">Privacy Policy</a> &middot; <a href="/terms-conditions">Terms &amp; Conditions</a> &middot; <a href="#" data-cookie-settings>Cookie settings</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="lp-sticky" aria-label="Contact us">
+  <a href="tel:+447944390309" class="btn btn-secondary">Call</a>
+  <a href="#ads-enquiry-form" class="btn btn-primary lp-to-form">Enquire</a>
+</div>
+
+<script>
+// Links to the form scroll to it, below the sticky header, and put the cursor in the first field
+(function () {
+  var form = document.getElementById('ads-enquiry-form');
+  document.querySelectorAll('.lp-to-form').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      if (!form) return;
+      e.preventDefault();
+      var header = document.querySelector('.site-header');
+      var offset = header ? header.offsetHeight + 12 : 12;
+      var top = form.getBoundingClientRect().top + window.pageYOffset - offset;
+      var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: top, behavior: still ? 'auto' : 'smooth' });
+      var first = form.querySelector('input, select, textarea');
+      if (first) setTimeout(function () { first.focus({ preventScroll: true }); }, still ? 0 : 500);
+    });
+  });
+})();
+</script>
+<script src="/script.js?v=20261109b"></script>
+<script src="/cookie-consent.js?v=20261109c" defer></script>
+</body>
+</html>

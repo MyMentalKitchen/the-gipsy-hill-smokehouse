@@ -622,3 +622,14 @@ body.search-open { overflow: hidden; }
   .search-toggle { padding: 0; width: 40px; }
   .search-toggle-label { display: none; }
 }
+/* Compact sticky header on phones (one row) - 2026-11-06 */
+@media (max-width: 860px) {
+  .site-header { padding: 10px 0; }
+  .site-header .container { gap: 10px; }
+  .brand { flex: 1 1 0; min-width: 0; gap: 10px; }
+  .brand-name { display: block; line-height: 1.15; }
+  .brand img { width: 44px; height: 44px; }
+  .brand-name { font-size: 16px; }
+  .brand br, .brand-tag { display: none; }
+  .search-toggle, .nav-toggle { flex: 0 0 auto; }
+}
