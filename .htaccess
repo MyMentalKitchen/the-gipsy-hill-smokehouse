@@ -52,16 +52,16 @@ RewriteRule ^hog-roast-party/?$                             /private-parties [R=
 RewriteRule ^venues/?$                                      /event-catering [R=301,L]
 
 # --- Menus and food (all collapsed into Our Food)
-RewriteRule ^menus?/?$                                      /our-food [R=301,L]
-RewriteRule ^antipasti/?$                                   /our-food [R=301,L]
-RewriteRule ^canapes/?$                                     /our-food [R=301,L]
-RewriteRule ^desserts/?$                                    /our-food [R=301,L]
-RewriteRule ^drinks/?$                                      /our-food [R=301,L]
-RewriteRule ^pies/?$                                        /our-food [R=301,L]
-RewriteRule ^salads-sides/?$                                /our-food [R=301,L]
-RewriteRule ^brochures/?$                                   /our-food [R=301,L]
-RewriteRule ^copy-of-set-menus/?$                           /our-food [R=301,L]
-RewriteRule ^copy-of-tab-menu/?$                            /our-food [R=301,L]
+RewriteRule ^menus?/?$                                      /gipsy-hill-smokehouse-menu [R=301,L]
+RewriteRule ^antipasti/?$                                   /gipsy-hill-smokehouse-menu [R=301,L]
+RewriteRule ^canapes/?$                                     /gipsy-hill-smokehouse-menu [R=301,L]
+RewriteRule ^desserts/?$                                    /gipsy-hill-smokehouse-menu [R=301,L]
+RewriteRule ^drinks/?$                                      /gipsy-hill-smokehouse-menu [R=301,L]
+RewriteRule ^pies/?$                                        /gipsy-hill-smokehouse-menu [R=301,L]
+RewriteRule ^salads-sides/?$                                /gipsy-hill-smokehouse-menu [R=301,L]
+RewriteRule ^brochures/?$                                   /gipsy-hill-smokehouse-menu [R=301,L]
+RewriteRule ^copy-of-set-menus/?$                           /gipsy-hill-smokehouse-menu [R=301,L]
+RewriteRule ^copy-of-tab-menu/?$                            /gipsy-hill-smokehouse-menu [R=301,L]
 
 # --- Media
 RewriteRule ^videos-hog-roast-gipsy-hill-smokehouse/?$      /gallery [R=301,L]
