@@ -45,7 +45,6 @@ RewriteRule ^menus/wedding-menus/?$                         /wedding-menus [R=30
 # --- Hog roast / spit roast service pages
 RewriteRule ^hogroasts/?$                                   /spit-roasts-hog-roasts [R=301,L]
 RewriteRule ^ultimate-guide-to-hog-roasts/?$                /spit-roasts-hog-roasts [R=301,L]
-RewriteRule ^hog-roast-catering-beckenham/?$                /spit-roasts-hog-roasts [R=301,L]
 RewriteRule ^trailer/?$                                     /spit-roasts-hog-roasts [R=301,L]
 
 # --- Parties / events
@@ -54,7 +53,6 @@ RewriteRule ^venues/?$                                      /event-catering [R=3
 
 # --- Menus and food (all collapsed into Our Food)
 RewriteRule ^menus?/?$                                      /our-food [R=301,L]
-RewriteRule ^gipsy-hill-smokehouse-menu(/.*)?$              /our-food? [R=301,L]
 RewriteRule ^antipasti/?$                                   /our-food [R=301,L]
 RewriteRule ^canapes/?$                                     /our-food [R=301,L]
 RewriteRule ^desserts/?$                                    /our-food [R=301,L]
@@ -76,13 +74,10 @@ RewriteCond %{DOCUMENT_ROOT}/$1.html -f
 RewriteRule ^(.+?)/?$ /$1.html [END]
 
 # --- Blog posts (blog retired — sent to the closest service page)
-RewriteRule ^post/ultimate-guide-to-achieving-the-perfect-pork-crackling/?$          /spit-roasts-hog-roasts [R=301,L]
 RewriteRule ^post/what-is-a-hog-roast/?$                                             /spit-roasts-hog-roasts [R=301,L]
 RewriteRule ^post/hog-roast/?$                                                       /spit-roasts-hog-roasts [R=301,L]
 RewriteRule ^post/history-of-the-hog-roast/?$                                        /spit-roasts-hog-roasts [R=301,L]
 RewriteRule ^post/how-the-saxons-gave-us-the-hog-roast/?$                            /spit-roasts-hog-roasts [R=301,L]
-RewriteRule ^post/what-are-the-best-sides-to-pair-with-a-hog-roast/?$                /our-food [R=301,L]
-RewriteRule ^post/bottoms-up-what-drinks-to-pair-with-your-delicious-hog-roast/?$    /our-food [R=301,L]
 RewriteRule ^post/3-top-tips-for-devising-the-perfect-wedding-breakfast/?$           /wedding-menus [R=301,L]
 RewriteRule ^post/3-top-tips-for-devising-the-perfect-wedding-hog-roast-breakfast/?$ /wedding-menus [R=301,L]
 RewriteRule ^post/what-makes-the-perfect-wedding-menu-expert-insights-from-london-s-catering-scene/?$ /wedding-menus [R=301,L]
@@ -135,7 +130,6 @@ RewriteRule ^(.+)$ $1.html [L]
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json image/svg+xml
 </IfModule>
-
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresByType text/css                "access plus 1 month"
@@ -146,3 +140,14 @@ RewriteRule ^(.+)$ $1.html [L]
   ExpiresByType image/svg+xml           "access plus 1 year"
   ExpiresByType text/html               "access plus 1 hour"
 </IfModule>
+# Compress and cache JavaScript (added 9 Nov 2026)
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE application/javascript text/javascript application/x-javascript
+</IfModule>
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType application/javascript "access plus 30 days"
+  ExpiresByType text/javascript "access plus 30 days"
+</IfModule>
+Redirect 301 /about https://www.thegipsyhillsmokehouse.com/our-story
+Redirect 301 /book-online https://www.thegipsyhillsmokehouse.com/contact
