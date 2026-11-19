@@ -61,6 +61,7 @@
   "@type": "LocalBusiness",
   "@id": "https://www.thegipsyhillsmokehouse.com/#business",
   "name": "The Gipsy Hill Smokehouse",
+  "alternateName": "Roast Hog",
   "description": "Live-fire event catering: hog roasts, spit roasts and BBQ for weddings, private parties and corporate events, cooked at your venue.",
   "url": "https://www.thegipsyhillsmokehouse.com/",
   "logo": "https://www.thegipsyhillsmokehouse.com/images/the-gipsy-hill-smokehouse.jpg",
@@ -75,7 +76,10 @@
     "addressCountry": "GB"
   },
   "geo": { "@type": "GeoCoordinates", "latitude": 51.4214708, "longitude": -0.0912067 },
-  "areaServed": ["London", "South East England"],
+  "areaServed": [
+    { "@type": "City", "name": "London" },
+    { "@type": "AdministrativeArea", "name": "South East England" }
+  ],
   "priceRange": "££",
   "openingHoursSpecification": [
     { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "08:00", "closes": "21:00" }
